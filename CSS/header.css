@@ -1,0 +1,169 @@
+.header {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 5% 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+a {
+  color: #2a5ea4;
+}
+
+.logo{
+  width: auto;
+  height: 4rem;
+}
+
+.toggl {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.toggl .menu-bar {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 4px;
+  background-color: #2a5ea4;
+  margin: 6px 0;
+  padding: 0;
+  transition: 0.4s;
+}
+
+#header {
+  display: none;
+}
+
+.change {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change .menu-bar {
+  position: static;
+  margin: 0 0 0 5%;
+  padding: 0;
+}
+
+.change #header ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.change #header li a {
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+
+.change #header li a:hover {
+  color: white;;
+}
+
+@media only screen and (max-width: 400px) {
+  .header {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .header a {
+    font-size: 8px;
+  }
+
+  .header a:hover {
+    color: white;
+  }
+
+  .logo{
+    max-width: 30%;
+    height: auto;
+  }
+
+  .toggl {
+    max-width: 70%;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
+    padding: 1% 0;
+    margin: 0;
+  }
+
+  .toggl.menu-bar{
+    padding: 5% 0 0 0;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 20px;
+    height: 3px;
+    margin: 3px 0;
+    padding: 0;
+    transition: 0.4s;
+  }
+
+  .sidePanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidePanel a {
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidepPanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 16px;
+  }
+
+
+}
